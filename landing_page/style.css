@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: none;
+}
+.whitebg{
+    background-color: white;
+}
+
+.bgmain {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(/main.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.navtype {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navul{
+    list-style: none;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navulitem{
+    padding: 7px;
+}
+
+.baseline {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.overphoto {
+    position: relative;
+    mix-blend-mode: darken;
+    width: 400px;
+}
+
+#innerphoto {
+    display: block;
+    margin: 0 auto;
+}
+
+.worldbg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/world.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;color: white;
+}
+
+
+.second{
+    display: flex;
+}
+.secondmephoto{
+    display: block;
+    margin: 0 auto;
+}
+.secondhead{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+@media screen and (max-width:424px) {
+    .mainhead {
+        font-size: x-large;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .secondhand {
+        font-size: small;
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:768px) {
+    .mainhead {
+        font-size: xx-large;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .secondhand {
+        font-size: medium;
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .mainhead {
+        font-size: 60px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .secondhand {
+        font-size: large;
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .mainhead {
+        font-size: 72px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .secondhand {
+        font-size: x-large;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+}
+
+.expressvpnbtn {
+    background-color: #2a9d8f;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+.expressvpnbtn:hover {
+    background-color: yellow;
+    color: black;
+}
