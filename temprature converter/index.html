@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="inner_container">
+            <div>
+                <span style="float: left;color: black;font-weight: bolder;font-size: large;" id="time"></span>
+                <span style="float: right;">
+                    <img src="Mobile-Battery-75-Percent-icon.png" alt="" width="20px">
+                </span>
+            </div>
+            <br>
+            <!-- <div class="mainhead">TEMPRATURE CONVERTER</div> -->
+            <div class="mainhead">Tempraturer Converter</div>
+            <div style="display: flex;">
+                <div class="w50">Degrees</div>
+                <div class="w50">Types</div>
+            </div>
+            <div style="display: flex;">
+                <div class="w50"><input style="border: none ;border-bottom: 2px solid black;padding: 5px; width: 90%; font-size: large;"
+                        id="valuesss" placeholder="0.000" type="number"></div>
+                <div class="w50">
+                    <select id="typessss"
+                        style="padding: 5px;border: none; border-bottom: 2px solid black; width: 100%; font-size: large;">
+                        <option value="celcius">Celcius</option>
+                        <option value="faren">Fahrenhiet</option>
+                    </select>
+                </div>
+            </div>
+            <div style="font-size: xx-large;" class="w50">Result</div>
+            <div style="border-bottom: 2px solid black; margin-left: 5px; margin-right: 5px;" id="resu">
+            </div>
+            <br>
+            <div style="text-align: center; font-size: xx-large;"><button
+                    style="font-size: xx-large; padding: 10px; border-radius: 10px; background-color: #284b63; color: white;"
+                    onclick="showoutput()">Convert</button></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        setInterval(() => {
+            const d = new Date();
+            let minutes = d.getMinutes();
+            let hours = d.getHours();
+            let sec = d.getSeconds();
+            let ans = '' + hours + ':' + minutes + ':' + sec;
+            document.getElementById("time").innerHTML = ans
+        }, 100);
+
+
+        function showoutput() {
+            let val = document.getElementById("valuesss").value;
+            let type = document.getElementById("typessss").value
+            if (type === "faren") {
+                console.log("Fahrenhiet")
+                let ans = val * 1.8 + 32
+                document.getElementById("resu").innerHTML = `${ans} degree Fahrenhiet`;
+            }
+            else{
+                console.log("celcius")
+                let ans = (val - 32)/1.8;
+                document.getElementById("resu").innerHTML = `${ans} degree Celcius`;
+            }
+        }
+    </script>
+</body>
+
+</html>
